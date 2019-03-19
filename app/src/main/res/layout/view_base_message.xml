@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="8dp">
+
+	<ImageView
+		android:id="@+id/ivUserProfile"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<TextView
+		android:id="@+id/tvUserName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintLeft_toRightOf="@id/ivUserProfile"
+		app:layout_constraintTop_toTopOf="@id/ivUserProfile"
+		android:layout_marginLeft="12dp"
+		android:textSize="14dp"
+		android:textColor="@color/light_black"
+		android:textStyle="bold"/>
+
+	<TextView
+		android:id="@+id/tvMessageTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintLeft_toRightOf="@id/tvUserName"
+		app:layout_constraintTop_toTopOf="@id/tvUserName"
+		android:layout_marginLeft="8dp"
+		android:textSize="14dp"
+		android:textColor="@color/gray"/>
+
+	<TextView
+		android:id="@+id/tvMessageContent"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintLeft_toLeftOf="@id/tvUserName"
+		app:layout_constraintTop_toBottomOf="@id/tvUserName"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginTop="8dp"
+		android:textSize="14dp"
+		android:textColor="@color/light_black"/>
+
+	<ImageView
+		android:id="@+id/ivAttachedImage"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintLeft_toLeftOf="@id/tvUserName"
+		app:layout_constraintTop_toBottomOf="@id/tvMessageContent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginTop="8dp"
+		android:scaleType="centerCrop"
+		android:visibility="gone"/>
+
+	<android.support.constraint.ConstraintLayout
+		android:id="@+id/clAttachedFile"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintLeft_toLeftOf="@id/tvUserName"
+		app:layout_constraintTop_toBottomOf="@id/ivAttachedImage"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginTop="8dp"
+		android:padding="16dp"
+		android:visibility="gone">
+
+		<ImageView
+			android:id="@+id/ivAttachedFileImage"
+			android:layout_width="48dp"
+			android:layout_height="64dp"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+
+		<TextView
+			android:id="@+id/tvAttachedFileName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintLeft_toRightOf="@id/ivAttachedFileImage"
+			app:layout_constraintTop_toTopOf="@id/ivAttachedFileImage"
+			android:textSize="12dp"
+			android:textColor="@color/light_black"
+			android:textStyle="bold"/>
+
+		<TextView
+			android:id="@+id/tvAttachedFileType"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintLeft_toLeftOf="@id/tvAttachedFileName"
+			app:layout_constraintTop_toBottomOf="@id/tvAttachedFileName"
+			android:textSize="12dp"
+			android:textColor="@color/gray"/>
+
+	</android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

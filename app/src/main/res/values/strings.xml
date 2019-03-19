@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LikeSlack</string>
+    <string name="send_message_hint">Message #%1$s</string>
 </resources>

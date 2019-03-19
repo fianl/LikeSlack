@@ -5,6 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     
     <!-- custom colors -->
+    <color name="transparent">#00FFFFFF</color>
     <color name="white">#FFF</color>
     <color name="light_black">#0A0A0A</color>
+    <color name="gray">#999999</color>
 </resources>
