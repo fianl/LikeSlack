@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.kkc.likeslack.R
 import data.BaseMessageData
 
@@ -57,7 +58,19 @@ class MessageAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
 
         fun setMessageInfo(msg: BaseMessageData) {
+            Glide.with(ivUserProfile!!).load(msg.user!!.profileImage)
+            tvUserName!!.text = msg.user!!.name
+            tvMsgTime!!.text = msg.time
+            tvMsgContent!!.text = msg.content
 
+            if(msg.attachedType == "jpg" || msg.attachedType == "jpeg" || msg.attachedType == "png" || msg.attachedType == "gif") {
+                ivAttachedFileImage!!.visibility = View.VISIBLE
+                Glide.with(ivAttachedFileImage!!).load(msg.attachedUrl)
+            }else{
+                clAttachedFile!!.visibility = View.VISIBLE
+                tvAttachedFileName!!.text = msg.attachedFileName
+                tvAttachedFileType!!.text = msg.attachedType!!.toUpperCase()
+            }
         }
     }
 }
