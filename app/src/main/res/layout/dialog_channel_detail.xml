@@ -74,14 +74,67 @@
 					app:layout_constraintTop_toBottomOf="@id/tvChannelDetailTitle"
 					app:layout_constraintRight_toRightOf="parent"/>
 
+				<TextView
+					android:id="@+id/tvChannelTopicTitle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:layout_constraintLeft_toLeftOf="@id/tvChannelDetailTitle"
+					app:layout_constraintTop_toBottomOf="@id/tvChannelPurpose"
+					android:textSize="14dp"
+					android:textColor="@color/light_black"
+					android:textStyle="bold"
+					android:text="TOPIC"/>
+
+				<TextView
+					android:id="@+id/tvChannelTopic"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:layout_constraintLeft_toLeftOf="@id/tvChannelDetailTitle"
+					app:layout_constraintTop_toBottomOf="@id/tvChannelTopicTitle"
+					android:textSize="14dp"
+					android:textColor="@color/light_black"
+					android:text="@string/channel_no_topic"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					app:layout_constraintLeft_toLeftOf="@id/tvChannelDetailTitle"
+					app:layout_constraintTop_toBottomOf="@id/tvChannelTopic"
+					android:background="@color/gray"/>
+
+				<TextView
+					android:id="@+id/tvChannelInfoEdit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:layout_constraintLeft_toLeftOf="@id/tvChannelDetailTitle"
+					app:layout_constraintTop_toBottomOf="@id/tvChannelTopic"
+					android:layout_marginTop="1dp"
+					android:textSize="14dp"
+					android:textColor="@color/dark_blue"
+					android:text="@string/edit"/>
+
 			</android.support.constraint.ConstraintLayout>
 
 			<android.support.constraint.ConstraintLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_marginLeft="8dp"
-				android:layout_marginRight="8dp"
-				android:layout_marginBottom="8dp">
+				android:layout_margin="8dp"
+				android:paddingLeft="16dp"
+				android:paddingTop="24dp"
+				android:paddingRight="16dp">
+
+				<TextView
+					android:id="@+id/tvChannelActionTitle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					android:textSize="14dp"
+					android:textColor="@color/light_black"
+					android:textStyle="bold"
+					android:text="@string/channel_actions"/>
+
+
 
 			</android.support.constraint.ConstraintLayout>
 
