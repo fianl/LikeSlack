@@ -4,4 +4,11 @@
     <string name="channel_no_topic">No topic set</string>
     <string name="edit">EDIT</string>
     <string name="channel_actions">Actions</string>
+    
+    <!-- channel detail action menus title -->
+    <string name="channel_detail_action_notification">Notification</string>
+    <string name="channel_detail_action_addsomeone">Add someone</string>
+    <string name="channel_detail_action_memberlist">Member list</string>
+    <string name="channel_detail_action_apps">Apps</string>
+    <string name="channel_detail_action_leave">Leave</string>
 </resources>

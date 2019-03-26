@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kkc.likeslack.R
+import com.kkc.likeslack.view.dialog.ChannelDetailDialog
 import data.ChannelData
 import kotlinx.android.synthetic.main.fragment_messaging.*
 
@@ -35,7 +36,8 @@ class MessagingFragment: Fragment() {
 
         tvChannelTitle.text = channelTitle
         tvChannelTitle.setOnClickListener {
-
+            var detailInfo = ChannelDetailDialog(context!!)
+            detailInfo.show()
         }
     }
 }
